@@ -1,0 +1,14 @@
+uuid: 3dab755f-16e7-49ea-9d69-c5ae551a2417
+name: codebakers_project_4
+mail: aurelijus.posius@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
