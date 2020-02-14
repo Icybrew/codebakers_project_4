@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * Implements hook_preprocess().
+ */
+function cb_theme_preprocess(&$variables, $hook) {
+  //$variables['attributes']['class'] = ['my-test-class'];
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function cb_theme_preprocess_html(&$variables, $hook) {
+  //$variables['attributes']['class'][] = 'my-test-class-2';
+  //dump($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function cb_theme_preprocess_page(&$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function cb_theme_preprocess_region(&$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function cb_theme_preprocess_block(&$variables) {
+  $variables['attributes']['class'] = [
+    'border',
+    'border-success',
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function cb_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function cb_theme_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  //$suggestions[] = $variables['theme_hook_original'] . '__user__' . Drupal::currentUser()->getAccountName();
+  //dump($suggestions, $variables);
+}

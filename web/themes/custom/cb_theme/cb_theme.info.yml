@@ -1,0 +1,23 @@
+name: 'Codebakers project 4 theme'
+description: 'Codebakers project 4 theme'
+package: Codebakers
+
+type: theme
+version: VERSION
+core: 8.x
+
+logo: logo.png
+screenshot: screenshot.png
+
+features:
+  favicon: true
+
+libraries:
+  - cb_theme/global-styling
+  - cb_theme/bootstrap_cdn
+
+regions:
+  header: Header
+  sidebar: Sidebar
+  content: Content
+  footer: Footer
