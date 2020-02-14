@@ -1,0 +1,19 @@
+header {
+  border: 5px solid dodgerblue;
+}
+
+main {
+  border: 5px solid red;
+}
+
+aside {
+  border: 5px solid yellow;
+}
+
+section {
+  border: 5px solid orange;
+}
+
+footer {
+  border: 5px solid #4c4c4c;
+}
