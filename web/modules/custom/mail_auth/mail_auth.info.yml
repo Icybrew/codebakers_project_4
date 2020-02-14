@@ -1,0 +1,7 @@
+name: 'Mail auth'
+description: 'Login by mail'
+package: codebakers
+
+type: module
+version: VERSION
+core: 8.x
