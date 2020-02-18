@@ -1,1 +1,12 @@
 <?php
+
+use Drupal\task_system\Form\RegisterDeveloperForm;
+use Drupal\task_system\Form\RegisterTeamLeadForm;
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function task_system_entity_type_alter(array &$entity_types) {
+  $entity_types['user']->setFormClass('register_developer', RegisterDeveloperForm::class);
+  $entity_types['user']->setFormClass('register_team_lead', RegisterTeamLeadForm::class);
+}

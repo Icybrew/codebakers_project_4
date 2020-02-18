@@ -1,0 +1,15 @@
+task_system.register.developer:
+  path: '/user/register/developer'
+  defaults:
+    _controller: '\Drupal\task_system\Controller\RegisterController::registerDeveloperForm'
+    _title: 'Register as a developer'
+  requirements:
+    _access_user_register: 'TRUE'
+
+task_system.register.team_lead:
+  path: '/user/register/team-lead'
+  defaults:
+    _controller: '\Drupal\task_system\Controller\RegisterController::registerTeamLeadForm'
+    _title: 'Register as a team lead'
+  requirements:
+    _access_user_register: 'TRUE'

@@ -5,3 +5,9 @@ package: codebakers
 type: module
 version: VERSION
 core: 8.x
+
+dependencies:
+  - file
+  - image
+  - link
+  - user
