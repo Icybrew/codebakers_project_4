@@ -1,0 +1,7 @@
+name: 'Task system'
+description: 'Task list system for developers'
+package: codebakers
+
+type: module
+version: VERSION
+core: 8.x
