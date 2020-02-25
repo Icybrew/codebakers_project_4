@@ -8,42 +8,10 @@ use Drupal\user\Entity\Role;
  * Implements hook_install().
  */
 function task_system_install() {
-  Role::create([
-    'id' => 'task_system.developer',
-    'label' => 'Developer',
-  ])->save();
-
-  Role::create([
-    'id' => 'task_system.team_lead',
-    'label' => 'Team lead',
-  ])->save();
 }
 
 /**
  * Implements hook_uninstall().
  */
 function task_system_uninstall() {
-  $forDelete = [];
-
-  // Roles.
-  $forDelete[] = Role::load('task_system.developer');
-  $forDelete[] = Role::load('task_system.team_lead');
-
-  // Form modes.
-  $forDelete[] = EntityFormMode::load('user.register_developer');
-  $forDelete[] = EntityFormMode::load('user.register_team_lead');
-
-  // Fields.
-  $forDelete[] = FieldConfig::loadByName('user', 'user', 'field_first_name');
-  $forDelete[] = FieldConfig::loadByName('user', 'user', 'field_last_name');
-  $forDelete[] = FieldConfig::loadByName('user', 'user', 'user_picture');
-  $forDelete[] = FieldConfig::loadByName('user', 'user', 'field_github');
-
-  // Deleting...
-  foreach ($forDelete as $item) {
-    if ($item) {
-      $item->delete();
-    }
-  }
-
 }

@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - user
-id: user.register_developer
-label: 'Register as a developer'
-targetEntityType: user
-cache: true
