@@ -1,0 +1,44 @@
+<?php
+
+namespace Drupal\task_system;
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityAccessControlHandler;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+
+/**
+ * Defines the access control handler for the task entity entity type.
+ */
+class TaskAccessControlHandler extends EntityAccessControlHandler {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
+
+    switch ($operation) {
+      case 'view':
+        return AccessResult::allowedIfHasPermission($account, 'view task entity');
+
+      case 'update':
+        return AccessResult::allowedIfHasPermissions($account, ['edit task entity', 'administer task entity'], 'OR');
+
+      case 'delete':
+        return AccessResult::allowedIfHasPermissions($account, ['delete task entity', 'administer task entity'], 'OR');
+
+      default:
+        // No opinion.
+        return AccessResult::neutral();
+    }
+
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
+    return AccessResult::allowedIfHasPermissions($account, ['create task entity', 'administer task entity'], 'OR');
+  }
+
+}
