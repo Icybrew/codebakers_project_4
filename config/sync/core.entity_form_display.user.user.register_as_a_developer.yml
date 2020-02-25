@@ -1,26 +1,26 @@
+uuid: b47b7431-6afe-4c8b-97f7-4c3cd1e296cf
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.user.register_team_lead
-    - field.field.user.user.field_first_name
+    - core.entity_form_mode.user.register_as_a_developer
+    - field.field.user.user.field_firstname
     - field.field.user.user.field_github
-    - field.field.user.user.field_last_name
-    - field.field.user.user.user_picture
+    - field.field.user.user.field_lastname
   module:
     - link
     - user
-id: user.user.register_team_lead
+id: user.user.register_as_a_developer
 targetEntityType: user
 bundle: user
-mode: register_team_lead
+mode: register_as_a_developer
 content:
   account:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_first_name:
+  field_firstname:
     weight: 1
     settings:
       size: 60
@@ -36,7 +36,7 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_last_name:
+  field_lastname:
     weight: 2
     settings:
       size: 60
@@ -44,8 +44,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-hidden:
-  contact: true
-  language: true
-  timezone: true
-  user_picture: true
+  language:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

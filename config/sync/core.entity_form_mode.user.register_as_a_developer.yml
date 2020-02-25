@@ -1,9 +1,10 @@
+uuid: 37b5300f-9c0d-4e7a-a488-18f10da9e723
 langcode: en
 status: true
 dependencies:
   module:
     - user
-id: user.register_developer
+id: user.register_as_a_developer
 label: 'Register as a developer'
 targetEntityType: user
 cache: true

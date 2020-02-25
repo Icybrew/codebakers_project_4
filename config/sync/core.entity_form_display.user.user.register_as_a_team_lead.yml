@@ -1,27 +1,33 @@
+uuid: 0968f7b8-f86a-4d52-8aca-c8b4b826fd35
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.user.register_developer
-    - field.field.user.user.field_first_name
+    - core.entity_form_mode.user.register_as_a_team_lead
+    - field.field.user.user.field_firstname
     - field.field.user.user.field_github
-    - field.field.user.user.field_last_name
-    - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - field.field.user.user.field_lastname
   module:
-    - image
     - user
-id: user.user.register_developer
+id: user.user.register_as_a_team_lead
 targetEntityType: user
 bundle: user
-mode: register_developer
+mode: register_as_a_team_lead
 content:
   account:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_first_name:
+  field_firstname:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lastname:
     weight: 2
     settings:
       size: 60
@@ -29,24 +35,15 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_last_name:
+  language:
     weight: 3
-    settings:
-      size: 60
-      placeholder: ''
+    region: content
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+  timezone:
+    weight: 4
     region: content
-  user_picture:
-    type: image_image
-    weight: 1
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+    settings: {  }
     third_party_settings: {  }
 hidden:
-  contact: true
   field_github: true
-  language: true
-  timezone: true

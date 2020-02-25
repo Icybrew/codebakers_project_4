@@ -1,0 +1,9 @@
+uuid: 462eb71a-bdf3-4532-9775-978a0da94f87
+langcode: en
+status: true
+dependencies: {  }
+id: tech_lead
+label: 'Tech Lead'
+weight: 3
+is_admin: null
+permissions: {  }

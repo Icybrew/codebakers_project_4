@@ -1,0 +1,14 @@
+uuid: 51c6084f-5a77-4be5-940a-342edf9b39ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.team_lead
+  module:
+    - user
+id: user_remove_role_action.team_lead
+label: 'Remove the Team Lead role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: team_lead

@@ -1,17 +1,16 @@
+uuid: 5aa8bf7f-be7b-4a9b-99be-c218a47b7a81
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - user
-id: user.field_last_name
-field_name: field_last_name
+id: user.field_github
+field_name: field_github
 entity_type: user
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: 1
 translatable: true

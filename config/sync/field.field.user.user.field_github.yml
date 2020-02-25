@@ -1,3 +1,4 @@
+uuid: aa2c6ed6-bb3d-4793-9c78-809661cf33b6
 langcode: en
 status: true
 dependencies:
@@ -11,12 +12,12 @@ field_name: field_github
 entity_type: user
 bundle: user
 label: Github
-description: ''
+description: 'Your GitHub profile.'
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 16
+  link_type: 17
   title: 0
 field_type: link

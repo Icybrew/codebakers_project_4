@@ -1,16 +1,17 @@
+uuid: 240c056a-3fdd-4abc-9403-09018881900f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_first_name
+    - field.storage.user.field_firstname
   module:
     - user
-id: user.user.field_first_name
-field_name: field_first_name
+id: user.user.field_firstname
+field_name: field_firstname
 entity_type: user
 bundle: user
-label: 'First name'
-description: ''
+label: Firstname
+description: 'Your firstname'
 required: true
 translatable: false
 default_value: {  }
