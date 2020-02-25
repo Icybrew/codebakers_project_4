@@ -6,4 +6,6 @@ id: developer
 label: Developer
 weight: 2
 is_admin: null
-permissions: {  }
+permissions:
+  - 'edit task entity'
+  - 'view task entity'

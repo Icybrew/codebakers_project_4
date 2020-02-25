@@ -6,4 +6,8 @@ id: tech_lead
 label: 'Tech Lead'
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create task entity'
+  - 'delete task entity'
+  - 'edit task entity'
+  - 'view task entity'

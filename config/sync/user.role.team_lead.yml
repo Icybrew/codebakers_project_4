@@ -6,4 +6,8 @@ id: team_lead
 label: 'Team Lead'
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create task entity'
+  - 'delete task entity'
+  - 'edit task entity'
+  - 'view task entity'
