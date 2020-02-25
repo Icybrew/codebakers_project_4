@@ -1,2 +1,43 @@
 <?php
 
+/**
+ * @file
+ * Provides a task entity entity type.
+ */
+
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_theme().
+ */
+function task_system_theme() {
+  return [
+    'task' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for task entity templates.
+ *
+ * Default template: task.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the task entity information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_task(array &$variables) {
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function task_system_task_update(Drupal\Core\Entity\EntityInterface $entity) {
+  $database = Drupal::database();
+}

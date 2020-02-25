@@ -1,0 +1,18 @@
+administer task entity:
+  title: 'Administer task entity settings'
+  restrict access: true
+
+access task entity overview:
+  title: 'Access task entity overview page'
+
+delete task entity:
+  title: 'Delete task entity'
+
+create task entity:
+  title: 'Create task entity'
+
+view task entity:
+  title: 'View task entity'
+
+edit task entity:
+  title: 'Edit task entity'

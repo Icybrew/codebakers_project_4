@@ -1,0 +1,7 @@
+entity.task.settings:
+  path: 'admin/structure/task'
+  defaults:
+    _form: '\Drupal\task_system\Form\TaskSettingsForm'
+    _title: 'Task entity'
+  requirements:
+    _permission: 'administer task entity'
