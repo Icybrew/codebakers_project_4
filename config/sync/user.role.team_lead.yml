@@ -1,0 +1,9 @@
+uuid: 60dc2d93-a885-4cf2-b7a3-69372e240479
+langcode: en
+status: true
+dependencies: {  }
+id: team_lead
+label: 'Team Lead'
+weight: 4
+is_admin: null
+permissions: {  }

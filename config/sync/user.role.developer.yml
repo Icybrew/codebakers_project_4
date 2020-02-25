@@ -1,0 +1,9 @@
+uuid: c1555be3-2039-4469-89bb-5da23d48d9f4
+langcode: en
+status: true
+dependencies: {  }
+id: developer
+label: Developer
+weight: 2
+is_admin: null
+permissions: {  }

@@ -1,0 +1,49 @@
+uuid: 0968f7b8-f86a-4d52-8aca-c8b4b826fd35
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register_as_a_team_lead
+    - field.field.user.user.field_firstname
+    - field.field.user.user.field_github
+    - field.field.user.user.field_lastname
+  module:
+    - user
+id: user.user.register_as_a_team_lead
+targetEntityType: user
+bundle: user
+mode: register_as_a_team_lead
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_firstname:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lastname:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  language:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_github: true
