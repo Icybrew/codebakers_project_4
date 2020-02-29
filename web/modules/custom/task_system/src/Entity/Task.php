@@ -261,14 +261,13 @@ class Task extends ContentEntityBase implements TaskInterface {
       ])
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['status'] = BaseFieldDefinition::create('string')
+    $fields['status'] = BaseFieldDefinition::create('list_string')
       ->setTranslatable(TRUE)
       ->setLabel(t('Status'))
       ->setDescription(t('A status indicating task progress.'))
       ->setRequired(TRUE)
       ->setDefaultValue('')
       ->setSettings([
-        'on_label' => 'Enabled',
         'allowed_values' => [
           'to_do' => 'To do',
           'in_progress' => 'In progress',

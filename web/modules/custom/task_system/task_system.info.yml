@@ -13,5 +13,6 @@ dependencies:
   - link
   - user
   - drupal:text
+  - options
 
 configure: entity.task.settings
