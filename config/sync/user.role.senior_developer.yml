@@ -1,10 +1,10 @@
-uuid: 462eb71a-bdf3-4532-9775-978a0da94f87
+uuid: 62ab480e-3fdc-4e34-9011-4aea90fd34dd
 langcode: en
 status: true
 dependencies: {  }
-id: tech_lead
-label: 'Tech Lead'
-weight: -5
+id: senior_developer
+label: 'Senior Developer'
+weight: -6
 is_admin: null
 permissions:
   - 'create task entity'

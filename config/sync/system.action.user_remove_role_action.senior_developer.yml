@@ -1,0 +1,14 @@
+uuid: f6e920ca-6056-4800-811d-cf3508b36023
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.senior_developer
+  module:
+    - user
+id: user_remove_role_action.senior_developer
+label: 'Remove the Senior Developer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: senior_developer

@@ -1,0 +1,14 @@
+uuid: 7b66ece3-140f-4833-ae6a-fd97593d08bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.middle_developer
+  module:
+    - user
+id: user_remove_role_action.middle_developer
+label: 'Remove the Middle Developer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: middle_developer

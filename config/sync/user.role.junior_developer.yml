@@ -1,0 +1,10 @@
+uuid: daa5cefd-70e0-4603-bb3b-671d82abfe0f
+langcode: en
+status: true
+dependencies: {  }
+id: junior_developer
+label: 'Junior Developer'
+weight: -8
+is_admin: null
+permissions:
+  - 'view task entity'

@@ -1,0 +1,14 @@
+uuid: 54057209-42dd-4a5d-9882-d59d4fda273a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.senior_developer
+  module:
+    - user
+id: user_add_role_action.senior_developer
+label: 'Add the Senior Developer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: senior_developer

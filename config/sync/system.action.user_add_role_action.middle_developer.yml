@@ -1,0 +1,14 @@
+uuid: 368d8ce9-dae2-44e1-8c67-ab529ddcd4c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.middle_developer
+  module:
+    - user
+id: user_add_role_action.middle_developer
+label: 'Add the Middle Developer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: middle_developer

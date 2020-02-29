@@ -1,0 +1,14 @@
+uuid: a0a349a1-43d6-4bca-9cfa-4aa4d642460e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.junior_developer
+  module:
+    - user
+id: user_remove_role_action.junior_developer
+label: 'Remove the Junior developer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: junior_developer
