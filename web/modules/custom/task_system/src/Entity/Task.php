@@ -20,7 +20,7 @@ use Drupal\user\UserInterface;
  *   handlers = {
  *     "view_builder" = "Drupal\task_system\Entity\TaskViewBuilder",
  *     "list_builder" = "Drupal\task_system\TaskListBuilder",
- *     "views_data" = "Drupal\views\EntityViewsData",
+ *     "views_data" = "Drupal\task_system\TaskViewsData",
  *     "access" = "Drupal\task_system\TaskAccessControlHandler",
  *     "form" = {
  *       "add" = "Drupal\task_system\Form\TaskForm",
