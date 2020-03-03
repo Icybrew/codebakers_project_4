@@ -5,7 +5,7 @@ entity.task.settings:
   parent: system.admin_structure
 
 entity.task.collection:
-  title: 'Task entities'
+  title: 'Tasks'
   description: 'List of task entities'
   route_name: entity.task.collection
   parent: system.admin_content
