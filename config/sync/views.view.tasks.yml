@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - options
     - task_system
     - user
 id: tasks
@@ -631,7 +632,12 @@ display:
           plugin_id: combine
       sorts: {  }
       title: Tasks
-      header: {  }
+      header:
+        create_task_button:
+          id: create_task_button
+          table: views
+          field: create_task_button
+          plugin_id: create_task_button
       footer: {  }
       empty: {  }
       relationships: {  }
