@@ -20,7 +20,7 @@ use Drupal\user\UserInterface;
  *   handlers = {
  *     "view_builder" = "Drupal\task_system\Entity\TaskViewBuilder",
  *     "list_builder" = "Drupal\task_system\TaskListBuilder",
- *     "views_data" = "Drupal\views\EntityViewsData",
+ *     "views_data" = "Drupal\task_system\TaskViewsData",
  *     "access" = "Drupal\task_system\TaskAccessControlHandler",
  *     "form" = {
  *       "add" = "Drupal\task_system\Form\TaskForm",
@@ -366,6 +366,29 @@ class Task extends ContentEntityBase implements TaskInterface {
         'label' => 'above',
         'type' => 'integer',
         'weight' => 12,
+      ])
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['assigned_mentor'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Assigned mentor'))
+      ->setDescription(t('User who will manage this task.'))
+      ->setRequired(TRUE)
+      ->setSetting('target_type', 'user')
+      ->setDisplayOptions('form', [
+        'type' => 'entity_reference_autocomplete',
+        'settings' => [
+          'match_operator' => 'CONTAINS',
+          'size' => 60,
+          'placeholder' => '',
+          'filter' => [], // TODO filter by the role from configuration
+        ],
+        'weight' => 8,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => 8,
       ])
       ->setDisplayConfigurable('view', TRUE);
 
