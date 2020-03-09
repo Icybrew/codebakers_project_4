@@ -29,7 +29,7 @@ use Drupal\user\UserInterface;
  *       "complete" = "Drupal\task_system\Form\TaskCompleteForm",
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider",
+ *       "html" = "Drupal\task_system\Entity\Routing\TaskHtmlRouteProvider",
  *     }
  *   },
  *   base_table = "task",

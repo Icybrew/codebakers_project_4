@@ -34,8 +34,8 @@ class TaskController extends ControllerBase {
     );
   }
 
-  function completeTask(TaskInterface $task) {
-    $form = $this->entityFormBuilder->getForm($task, 'complete');
-    return $form;
-  }
+//  function completeTask(TaskInterface $task) {
+//    $form = $this->entityFormBuilder->getForm($task, 'complete');
+//    return $form;
+//  }
 }
