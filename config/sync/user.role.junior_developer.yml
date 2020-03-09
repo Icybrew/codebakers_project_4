@@ -7,4 +7,5 @@ label: 'Junior Developer'
 weight: -8
 is_admin: null
 permissions:
+  - 'complete task entity'
   - 'view task entity'

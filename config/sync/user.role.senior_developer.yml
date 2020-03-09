@@ -7,6 +7,7 @@ label: 'Senior Developer'
 weight: -6
 is_admin: null
 permissions:
+  - 'complete task entity'
   - 'create task entity'
   - 'delete task entity'
   - 'edit task entity'
