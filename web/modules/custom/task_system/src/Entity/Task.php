@@ -25,7 +25,8 @@ use Drupal\user\UserInterface;
  *     "form" = {
  *       "add" = "Drupal\task_system\Form\TaskForm",
  *       "edit" = "Drupal\task_system\Form\TaskForm",
- *       "delete" = "Drupal\task_system\Form\TaskDeleteForm"
+ *       "delete" = "Drupal\task_system\Form\TaskDeleteForm",
+ *       "complete" = "Drupal\task_system\Form\TaskCompleteForm",
  *     },
  *     "route_provider" = {
  *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider",
@@ -45,6 +46,7 @@ use Drupal\user\UserInterface;
  *     "add-form" = "/admin/content/task/add",
  *     "canonical" = "/task/{task}",
  *     "edit-form" = "/admin/content/task/{task}/edit",
+ *     "complete-form" = "/admin/content/task/{task}/edit/complete",
  *     "delete-form" = "/admin/content/task/{task}/delete",
  *     "collection" = "/admin/content/task"
  *   },
@@ -144,7 +146,7 @@ class Task extends ContentEntityBase implements TaskInterface {
   /**
    * {@inheritdoc}
    */
-  public function getTakenTime() {
+  public function getTimeTaken() {
     return $this->get('time_taken')->value;
   }
 

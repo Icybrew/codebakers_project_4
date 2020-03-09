@@ -5,3 +5,15 @@ entity.task.settings:
     _title: 'Task entity'
   requirements:
     _permission: 'administer task entity'
+
+entity.task.edit-time-form:
+  path: '/admin/content/task/{task}/edit/complete'
+  defaults:
+    _controller: '\Drupal\task_system\Controller\TaskController::completeTask'
+    _title: 'Mark Task as completed'
+  requirements:
+    _permission: 'edit task entity'
+  options:
+    parameters:
+      user:
+        type: entity:task
