@@ -18,10 +18,14 @@ class CreateTaskButtonArea extends AreaPluginBase {
    * @inheritDoc
    */
   public function render($empty = FALSE) {
-    $url = Url::fromRoute('entity.task.add_form');
-    return [
-      '#markup' => '<a href="' . $url->toString() . '"><button>Create new Task</button></a>',
-    ];
+    if (\Drupal::currentUser()->hasPermission('create task entity')) {
+      $url = Url::fromRoute('entity.task.add_form');
+      return [
+        '#markup' => '<a href="' . $url->toString() . '"><button>Create new Task</button></a>',
+      ];
+    }
+
+    return [];
   }
 
 }
