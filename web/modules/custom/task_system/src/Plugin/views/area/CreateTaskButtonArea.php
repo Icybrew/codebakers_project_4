@@ -15,7 +15,7 @@ use Drupal\views\Plugin\views\area\AreaPluginBase;
 class CreateTaskButtonArea extends AreaPluginBase {
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   public function render($empty = FALSE) {
     if (\Drupal::currentUser()->hasPermission('create task entity')) {

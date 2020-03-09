@@ -16,3 +16,6 @@ view task entity:
 
 edit task entity:
   title: 'Edit task entity'
+
+complete task entity:
+  title: 'Mark Task as completed'

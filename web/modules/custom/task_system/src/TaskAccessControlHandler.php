@@ -27,6 +27,9 @@ class TaskAccessControlHandler extends EntityAccessControlHandler {
       case 'delete':
         return AccessResult::allowedIfHasPermissions($account, ['delete task entity', 'administer task entity'], 'OR');
 
+      case 'complete':
+        return AccessResult::allowedIfHasPermissions($account, ['edit task entity', 'administer task entity', 'complete task entity'], 'OR');
+
       default:
         // No opinion.
         return AccessResult::neutral();
