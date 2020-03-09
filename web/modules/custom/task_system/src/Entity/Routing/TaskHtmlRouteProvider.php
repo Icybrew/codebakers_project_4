@@ -50,7 +50,7 @@ class TaskHtmlRouteProvider extends AdminHtmlRouteProvider {
           '_entity_form' => "{$entity_type_id}.{$operation}",
           '_title_callback' => '\\Drupal\\Core\\Entity\\Controller\\EntityController::editTitle',
         ])
-        ->setRequirement('_entity_access', "{$entity_type_id}.update")
+        ->setRequirement('_entity_access', "{$entity_type_id}.complete")
         ->setOption('parameters', [
           $entity_type_id => [
             'type' => 'entity:' . $entity_type_id,
