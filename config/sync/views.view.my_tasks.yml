@@ -460,10 +460,10 @@ display:
           entity_type: task
           entity_field: created
           plugin_id: field
-        link_to_task_complete:
-          id: link_to_task_complete
-          table: views
-          field: link_to_task_complete
+        operations:
+          id: operations
+          table: task
+          field: operations
           relationship: none
           group_type: group
           admin_label: ''
@@ -504,11 +504,13 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: Completed
-          hide_empty: true
+          empty: ''
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          plugin_id: task_complete
+          destination: false
+          entity_type: task
+          plugin_id: entity_operations
       filters:
         combine:
           id: combine
