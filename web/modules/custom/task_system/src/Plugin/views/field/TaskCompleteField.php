@@ -26,14 +26,23 @@ class TaskCompleteField extends FieldPluginBase {
    * {@inheritDoc}
    */
   public function render(ResultRow $values) {
-    if (\Drupal::currentUser()->hasPermission('complete task entity') && strtolower($values->_entity->getStatus()) !== 'done') {
-      $url = Url::fromRoute('entity.task.complete_form', ['task' => $values->_entity->id()]);
-      return [
-        '#type' => 'link',
-        '#title' => 'Complete Task',
-        '#url' => $url,
-      ];
+    if (($values->_entity->access('complete'))) {
+      if (strtolower($values->_entity->getStatus()) !== 'done') {
+        $url = Url::fromRoute('entity.task.complete_form', ['task' => $values->_entity->id()]);
+        return [
+          '#type' => 'link',
+          '#title' => t('Complete Task'),
+          '#url' => $url,
+        ];
+      }
+      else {
+        return [
+          '#type' => 'markup',
+          '#markup' => 'Completed',
+        ];
+      }
     }
+
 
     return [];
   }
