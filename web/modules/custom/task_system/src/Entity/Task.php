@@ -131,7 +131,7 @@ class Task extends ContentEntityBase implements TaskInterface {
   /**
    * {@inheritdoc}
    */
-  public function getAssigneduser() {
+  public function getAssignedUser() {
     return $this->get('assigned_user')->value;
   }
 
