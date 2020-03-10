@@ -7,6 +7,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\TypedData\Exception\MissingDataException;
 use Drupal\task_system\TaskInterface;
 use Drupal\user\UserInterface;
 
@@ -132,14 +133,16 @@ class Task extends ContentEntityBase implements TaskInterface {
    * {@inheritdoc}
    */
   public function getAssignedUser() {
-    return $this->get('assigned_user')->value;
+    return $this->get('assigned_user')->entity;
+    //return $this->get('assigned_user')->first()->get('entity')->getTarget()->getValue();
   }
 
   /**
    * {@inheritdoc}
    */
   public function setAssignedUser($user) {
-    $this->set('assigned_user', $user);
+    $this->get('assigned_user')->entity = $user;
+    // TODO is this correct?
     return $this;
   }
 

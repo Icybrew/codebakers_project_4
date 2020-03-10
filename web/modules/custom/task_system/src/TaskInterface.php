@@ -5,7 +5,6 @@ namespace Drupal\task_system;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\user\EntityOwnerInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
-use Drupal\user\UserInterface;
 
 /**
  * Provides an interface defining a task entity type.
@@ -91,7 +90,7 @@ interface TaskInterface extends ContentEntityInterface, EntityOwnerInterface, En
   /**
    * Gets the task entity assigned user.
    *
-   * @return int
+   * @return \Drupal\user\UserInterface
    *   Assigned user of the task entity.
    */
   public function getAssignedUser();
@@ -99,7 +98,7 @@ interface TaskInterface extends ContentEntityInterface, EntityOwnerInterface, En
   /**
    * Sets task entity assigned user.
    *
-   * @param int $user
+   * @param \Drupal\user\UserInterface $user
    *   The task entity assigned user.
    *
    * @return \Drupal\task_system\TaskInterface
