@@ -116,4 +116,26 @@ class TaskListBuilder extends EntityListBuilder {
     return $operations;
   }
 
+  /**
+   * {@inheritDoc}
+   */
+  public function getOperations(EntityInterface $entity) {
+    $operations = parent::getOperations($entity);
+
+    if ($entity->access('complete') && strtolower($entity->getStatus()) !== 'done') {
+      $operations['complete'] = [
+        'title' => $this->t('Mark as done'),
+        'weight' => 15,
+        'url' => $entity->toUrl('complete-form'),
+        'query' => $this->redirectDestination->getAsArray(),
+      ];
+    }
+
+    uasort($operations, function ($a, $b) {
+      return ($a['weight'] ?? 1000) > ($b['weight'] ?? 1000) ? 1 : -1;
+    });
+
+    return $operations;
+  }
+
 }
