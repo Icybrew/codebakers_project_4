@@ -28,6 +28,11 @@ class TaskAccessControlHandler extends EntityAccessControlHandler {
         return AccessResult::allowedIfHasPermissions($account, ['delete task entity', 'administer task entity'], 'OR');
 
       case 'complete':
+        // Grant access to complete currently assigned tasks.
+        if ($account->id() === $entity->getAssignedUser()->id()) {
+          return AccessResult::allowed();
+        }
+
         return AccessResult::allowedIfHasPermissions($account, ['edit task entity', 'administer task entity', 'complete task entity'], 'OR');
 
       default:
