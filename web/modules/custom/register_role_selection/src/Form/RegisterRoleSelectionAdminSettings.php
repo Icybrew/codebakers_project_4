@@ -60,7 +60,6 @@ class RegisterRoleSelectionAdminSettings extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $roles = array_filter($form_state->getValue('roles'));
     sort($roles);
-dd($roles);
 
     $this->config('register_role_selection.admin_settings')
       ->set('roles', $roles)
