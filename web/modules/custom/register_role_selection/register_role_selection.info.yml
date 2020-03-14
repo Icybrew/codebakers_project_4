@@ -1,0 +1,13 @@
+name: 'Registration role selection'
+description: 'Gives users option to select which role to register'
+package: codebakers
+
+type: module
+version: VERSION
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+dependencies:
+  - user
+
+configure: register_role_selection.admin_settings

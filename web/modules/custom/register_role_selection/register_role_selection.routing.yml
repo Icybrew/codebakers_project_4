@@ -1,0 +1,7 @@
+register_role_selection.role_settings:
+  path: '/admin/config/people/accounts/registration-roles'
+  defaults:
+    _form: 'Drupal\register_role_selection\Form\RegisterRoleSelectionAdminSettings'
+    _title: 'Registration role selection settings'
+  requirements:
+    _permission: 'Administer account settings'

@@ -1,0 +1,5 @@
+register_role_selection.role_settings:
+  title: 'Registration role selection settings'
+  description: 'Select roles which will be shown in registration form'
+  route_name: register_role_selection.role_settings
+  parent: user.admin_index
