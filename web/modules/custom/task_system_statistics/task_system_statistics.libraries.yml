@@ -23,6 +23,7 @@ task_system_statistics:
     component:
       css/task-system-statistics.css: {}
   dependencies:
+    - core/jquery
     - core/drupalSettings
     - task_system_statistics/jquery-labelauty
     - task_system_statistics/chart
@@ -34,6 +35,5 @@ task_system_statistics_block:
     component:
       css/task-system-statistics-block.css: {}
   dependencies:
-    - core/drupalSettings
-    - task_system_statistics/jquery-labelauty
+    - core/jquery
     - task_system_statistics/chart
