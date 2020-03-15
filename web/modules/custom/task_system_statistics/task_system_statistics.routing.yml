@@ -1,0 +1,15 @@
+task_system_statistics.statistics:
+  path: '/tasks/statistics'
+  defaults:
+    _title: 'Tasks statistics'
+    _controller: '\Drupal\task_system_statistics\Controller\TaskSystemStatisticsController::statistics'
+  requirements:
+    _permission: 'access content'
+
+task_system_statistics.settings_form:
+  path: '/admin/config/content/task-system-statistics'
+  defaults:
+    _title: 'Task system statistics settings'
+    _form: 'Drupal\task_system_statistics\Form\SettingsForm'
+  requirements:
+    _permission: 'administer task_system_statistics configuration'
