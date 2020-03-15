@@ -1,0 +1,5 @@
+task_system_statistics.statistics:
+  title: 'Tasks statistics'
+  description: 'Statistics of tasks'
+  route_name:  task_system_statistics.statistics
+  menu_name: main

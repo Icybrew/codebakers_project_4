@@ -1,0 +1,39 @@
+chart:
+  version: 2.9.3
+  css:
+    base:
+      css/Chart.css: {}
+  js:
+    js/Chart.js: {}
+
+chartCDN:
+  remote: https://www.chartjs.org
+  version: 2.9.3
+  license:
+    name: MIT
+    url: https://www.chartjs.org/docs/latest/notes/license.html
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js: {type: external, minified: true}
+
+task_system_statistics:
+  js:
+    js/task-system-statistics.js: {}
+  css:
+    component:
+      css/task-system-statistics.css: {}
+  dependencies:
+    - core/drupalSettings
+    - task_system_statistics/jquery-labelauty
+    - task_system_statistics/chart
+
+task_system_statistics_block:
+  js:
+    js/task-system-statistics-block.js: {}
+  css:
+    component:
+      css/task-system-statistics-block.css: {}
+  dependencies:
+    - core/drupalSettings
+    - task_system_statistics/jquery-labelauty
+    - task_system_statistics/chart
