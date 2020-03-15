@@ -1,0 +1,20 @@
+uuid: 51c77bdd-f8af-4b38-86cb-62e5be883228
+langcode: en
+status: true
+dependencies:
+  module:
+    - task_system_statistics
+  theme:
+    - bartik
+id: tasksstatistics
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: task_system_statistics_block
+settings:
+  id: task_system_statistics_block
+  label: 'Tasks Statistics'
+  provider: task_system_statistics
+  label_display: visible
+visibility: {  }

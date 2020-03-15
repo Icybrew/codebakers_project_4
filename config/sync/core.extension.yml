@@ -17,6 +17,7 @@ module:
   register_role_selection: 0
   system: 0
   task_system: 0
+  task_system_statistics: 0
   text: 0
   toolbar: 0
   user: 0
