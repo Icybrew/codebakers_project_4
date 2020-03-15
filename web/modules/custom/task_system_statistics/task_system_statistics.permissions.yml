@@ -1,0 +1,3 @@
+administer task_system_statistics configuration:
+  title: 'Administer task_system_statistics configuration'
+  restrict access: true
