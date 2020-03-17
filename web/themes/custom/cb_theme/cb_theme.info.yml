@@ -2,6 +2,7 @@ name: 'Codebakers project 4 theme'
 description: 'Codebakers project 4 theme'
 package: Codebakers
 
+base theme: false
 type: theme
 version: VERSION
 core: 8.x
