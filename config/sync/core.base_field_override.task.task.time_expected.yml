@@ -1,0 +1,24 @@
+uuid: a5c586c0-7ad9-41bd-bedf-9e1c34aa0620
+langcode: en
+status: true
+dependencies:
+  module:
+    - task_system
+id: task.task.time_expected
+field_name: time_expected
+entity_type: task
+bundle: task
+label: 'Expected time'
+description: 'Expected completion time.'
+required: true
+translatable: false
+default_value:
+  -
+    value: null
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

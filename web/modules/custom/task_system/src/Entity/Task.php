@@ -292,6 +292,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['external_link'] = BaseFieldDefinition::create('link')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task external link'))
       ->setDescription(t('Task external link (YouTrack, GitHub...).'))
       ->setRequired(FALSE)
@@ -312,6 +313,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['assigned_user'] = BaseFieldDefinition::create('entity_reference')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Assigned to'))
       ->setDescription(t('User to whom this task will be assigned.'))
       ->setRequired(TRUE)
@@ -335,6 +337,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['time_taken'] = BaseFieldDefinition::create('integer')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Time taken'))
       ->setDescription(t('Time taken to complete the task.'))
       ->setRequired(FALSE)
@@ -355,6 +358,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['time_expected'] = BaseFieldDefinition::create('integer')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Expected time'))
       ->setDescription(t('Expected completion time.'))
       ->setRequired(TRUE)
@@ -375,6 +379,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['assigned_mentor'] = BaseFieldDefinition::create('entity_reference')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Assigned mentor'))
       ->setDescription(t('User who will manage this task.'))
       ->setRequired(TRUE)
@@ -398,6 +403,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['uid'] = BaseFieldDefinition::create('entity_reference')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Author'))
       ->setDescription(t('Task author.'))
       ->setSetting('target_type', 'user')

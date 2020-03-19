@@ -1,0 +1,20 @@
+uuid: bd30afba-af07-4b10-93a7-618d73ce1fa4
+langcode: en
+status: true
+dependencies:
+  module:
+    - task_system
+id: task.task.assigned_mentor
+field_name: assigned_mentor
+entity_type: task
+bundle: task
+label: 'Assigned mentor'
+description: 'User who will manage this task.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

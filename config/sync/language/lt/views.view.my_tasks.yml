@@ -1,0 +1,49 @@
+label: 'Mano užduotys'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Taikyti
+          reset_button_label: Atstatyti
+          exposed_sorts_label: 'Rūšiuoti pagal'
+          sort_asc_label: Didėjimo
+          sort_desc_label: Mažėjimo
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Įrašų per puslapį'
+      fields:
+        title:
+          label: Pavadinimas
+        status:
+          label: Statusas
+        time_expected:
+          label: 'Numatytas laikas'
+        assigned_mentor:
+          label: 'Priskirtas mentorius'
+        created:
+          label: Sukurta
+      filters:
+        combine:
+          expose:
+            label: Paieška
+            placeholder: 'Pavadinimas, statusas, mentorius...'
+      title: 'Mano užduotys'
+      footer:
+        result:
+          content: 'Atvaizduojama @start - @end iš @total'
+      empty:
+        area:
+          content:
+            value: 'Jūs neturite jums priskirtu užduočių!'
+            format: plain_text
+      arguments:
+        assigned_user:
+          exception:
+            title: Visi
+  my_tasks:
+    display_title: Puslapis
+    display_options:
+      menu:
+        title: 'Mano užduotys'

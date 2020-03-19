@@ -1,0 +1,50 @@
+description: 'Vartotojo užduotys'
+label: 'Vartotojo užduotys'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Taikyti
+          reset_button_label: Atstatyti
+          exposed_sorts_label: 'Rikiuoti pagal'
+          sort_asc_label: Didejimo
+          sort_desc_label: Mažėjimo
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Įrašų per puslapį'
+      fields:
+        assigned_user:
+          label: 'Priskirtas vartotojas'
+        title:
+          label: Pavadinimas
+        status:
+          label: Statusas
+        assigned_mentor:
+          label: 'Priskirtas mentorius'
+        time_expected:
+          label: 'Numatytas laikas'
+        created:
+          label: Sukurta
+        operations:
+          label: Veiksmas
+      title: '{{ assigned_user }} užduotys'
+      footer:
+        result:
+          content: 'Atvaizduojama @start - @end iš @total'
+      empty:
+        area:
+          content:
+            value: 'Vartotojas neturi jam priskirtu užduočių'
+            format: plain_text
+      arguments:
+        assigned_user:
+          exception:
+            title: Visi
+          title: '{{ assigned_user }} - užduotys'
+  user_tasks:
+    display_title: Puslapis
+    display_options:
+      menu:
+        title: Užduotys

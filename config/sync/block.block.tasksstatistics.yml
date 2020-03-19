@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - task_system_statistics
+    - user
   theme:
     - bartik
 id: tasksstatistics
@@ -17,4 +18,11 @@ settings:
   label: 'Tasks Statistics'
   provider: task_system_statistics
   label_display: visible
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

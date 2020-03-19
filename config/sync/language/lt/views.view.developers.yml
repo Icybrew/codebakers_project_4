@@ -1,0 +1,14 @@
+label: Programuotojai
+display:
+  default:
+    display_options:
+      filters:
+        combine:
+          group_info:
+            description: ''
+      title: Programuotojai
+  page_1:
+    display_title: Puslapis
+    display_options:
+      menu:
+        title: Programuotojai

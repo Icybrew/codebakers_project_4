@@ -1,0 +1,20 @@
+uuid: 2c75b175-1b47-424a-a976-e76f09868979
+langcode: en
+status: true
+dependencies:
+  module:
+    - task_system
+id: task.task.assigned_user
+field_name: assigned_user
+entity_type: task
+bundle: task
+label: 'Assigned to'
+description: 'User to whom this task will be assigned.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
