@@ -6,6 +6,7 @@ dependencies:
     - field.storage.user.field_firstname
     - field.storage.user.field_lastname
     - system.menu.main
+    - user.role.administrator
     - user.role.junior_developer
     - user.role.middle_developer
     - user.role.senior_developer
@@ -31,8 +32,10 @@ display:
         type: role
         options:
           role:
+            senior_developer: senior_developer
             tech_lead: tech_lead
             team_lead: team_lead
+            administrator: administrator
       cache:
         type: tag
         options: {  }
