@@ -47,12 +47,12 @@ services:
     #      PHP_XDEBUG_REMOTE_HOST: 10.0.75.1 # Windows, Docker < 18.03
     #      PHP_XDEBUG_REMOTE_LOG: /tmp/php-xdebug.log
     ## PHPUnit Drupal testing configurations
-    #      SIMPLETEST_BASE_URL: "http://nginx"
-    #      SIMPLETEST_DB: "${DB_DRIVER}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}#tests_"
-    #      MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", {"browserName":"chrome","goog:chromeOptions":{"args":["--disable-gpu","--headless"]}}, "http://chrome:9515"]'
+      SIMPLETEST_BASE_URL: "http://nginx"
+      SIMPLETEST_DB: "${DB_DRIVER}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}#tests_"
+      MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", {"browserName":"chrome","goog:chromeOptions":{"args":["--disable-gpu","--headless"]}}, "http://chrome:9515"]'
 
     volumes:
-      - ./:/var/www/html:cached
+      - ./:/var/www/html
   ## For macOS users (https://wodby.com/docs/stacks/drupal/local#docker-for-mac)
   #      - ./:/var/www/html:cached # User-guided caching
   #      - docker-sync:/var/www/html # Docker-sync
@@ -71,7 +71,7 @@ services:
       NGINX_SERVER_ROOT: /var/www/html/web
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
     volumes:
-      - ./:/var/www/html:cached
+      - ./:/var/www/html
     # For macOS users (https://wodby.com/docs/stacks/drupal/local#docker-for-mac)
     #      - ./:/var/www/html:cached # User-guided caching
     #      - docker-sync:/var/www/html # Docker-sync

@@ -1,0 +1,21 @@
+uuid: 03f02600-a0e5-4917-8ced-ae61b88b2b84
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - task_system
+id: task.task.status
+field_name: status
+entity_type: task
+bundle: task
+label: Status
+description: 'A status indicating task progress.'
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

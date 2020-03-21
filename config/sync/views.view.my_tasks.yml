@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - system.menu.main
+    - user.role.administrator
     - user.role.junior_developer
     - user.role.middle_developer
     - user.role.senior_developer
@@ -36,6 +37,7 @@ display:
             senior_developer: senior_developer
             tech_lead: tech_lead
             team_lead: team_lead
+            administrator: administrator
       cache:
         type: tag
         options: {  }

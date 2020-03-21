@@ -1,0 +1,20 @@
+uuid: 7dfdd348-07da-48ce-84c5-697c71ec47e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - task_system
+id: task.task.uid
+field_name: uid
+entity_type: task
+bundle: task
+label: Author
+description: 'Task author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

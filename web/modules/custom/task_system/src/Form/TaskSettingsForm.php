@@ -6,7 +6,9 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Configuration form for a task entity entity type.
+ * Form controller for the task entity admin settings forms.
+ *
+ * @package Drupal\task_system\Form
  */
 class TaskSettingsForm extends FormBase {
 

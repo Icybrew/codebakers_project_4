@@ -6,7 +6,9 @@ use Drupal\Core\Entity\ContentEntityConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for the task complete form.
+ * Form controller for the task entity complete forms.
+ *
+ * @package Drupal\task_system\Form
  */
 class TaskCompleteForm extends ContentEntityConfirmFormBase {
 

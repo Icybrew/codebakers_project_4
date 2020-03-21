@@ -1,0 +1,18 @@
+uuid: 98485c47-dda3-415c-a562-9f02383b1f28
+langcode: en
+status: true
+dependencies:
+  module:
+    - task_system
+id: task.task.created
+field_name: created
+entity_type: task
+bundle: task
+label: 'Created at'
+description: 'Time that task was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,24 @@
+uuid: edcd5e9f-ec3d-4f00-80d9-54857b6787f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - task_system
+id: task.task.time_taken
+field_name: time_taken
+entity_type: task
+bundle: task
+label: 'Time taken'
+description: 'Time taken to complete the task.'
+required: false
+translatable: false
+default_value:
+  -
+    value: null
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

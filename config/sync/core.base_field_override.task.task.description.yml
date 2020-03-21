@@ -1,0 +1,19 @@
+uuid: 94ca77a8-41d0-41ee-9223-6783e4c73a5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - task_system
+    - text
+id: task.task.description
+field_name: description
+entity_type: task
+bundle: task
+label: Description
+description: 'A description of the task.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

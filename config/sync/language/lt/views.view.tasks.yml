@@ -1,0 +1,44 @@
+label: Užduotys
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Taikyti
+          reset_button_label: Atstatyti
+          exposed_sorts_label: 'Rūšiuoti pagal'
+          sort_asc_label: Didejimo
+          sort_desc_label: Mažėjimo
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Įrašų per puslapį'
+      fields:
+        title:
+          label: Pavadinimas
+        status:
+          label: Statusas
+        assigned_user:
+          label: Vartotojas
+        uid:
+          label: Autorius
+        created:
+          label: Sukurta
+        changed:
+          label: Atnaujinta
+      filters:
+        combine:
+          expose:
+            label: Paieška
+            description: 'Pavadinimas, statusas, mentorius...'
+      title: Užduotys
+      footer:
+        result:
+          content: 'Atvaizduojama @start - @end iš @total'
+  page_1:
+    display_title: Puslapis
+    display_options:
+      menu:
+        title: Užduotys
+      tab_options:
+        title: Užduotys
