@@ -6,8 +6,9 @@ use Drupal\Core\Url;
 use Drupal\Tests\BrowserTestBase;
 
 /**
- * Provides functional tests for task entity form.
+ * The class to test TaskForm.
  *
+ * @group task_system
  * @package Drupal\Tests\task_system\Functional
  */
 class TaskFormTest extends BrowserTestBase {

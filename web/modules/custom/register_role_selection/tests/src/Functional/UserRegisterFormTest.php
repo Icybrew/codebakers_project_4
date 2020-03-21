@@ -6,8 +6,9 @@ use Drupal\Core\Url;
 use Drupal\Tests\BrowserTestBase;
 
 /**
- * Class UserRegisterFormTest.
+ * The class to test UserRegisterForm class.
  *
+ * @group register_role_selection
  * @package Drupal\Tests\register_role_selection\Functional
  */
 class UserRegisterFormTest extends BrowserTestBase {

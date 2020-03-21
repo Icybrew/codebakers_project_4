@@ -6,8 +6,9 @@ use Drupal\Core\Url;
 use Drupal\Tests\BrowserTestBase;
 
 /**
- * Class MailAuthLoginTest.
+ * The class to test UserLoginForm class.
  *
+ * @group mail_auth
  * @package Drupal\Tests\mail_auth\Functional
  */
 class MailAuthLoginTest extends BrowserTestBase {

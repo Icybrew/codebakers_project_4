@@ -6,8 +6,9 @@ use Drupal\Core\Url;
 use Drupal\Tests\BrowserTestBase;
 
 /**
- * Class StatisticsRouteTest.
+ * The class to test task_system_statistics routes.
  *
+ * @group task_system_statistics
  * @package Drupal\Tests\task_system_statistics\Functional
  */
 class StatisticsRouteTest extends BrowserTestBase {
