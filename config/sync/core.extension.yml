@@ -18,6 +18,9 @@ module:
   page_cache: 0
   path_alias: 0
   register_role_selection: 0
+  rest: 0
+  restui: 0
+  serialization: 0
   system: 0
   task_system: 0
   task_system_statistics: 0
