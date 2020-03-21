@@ -6,7 +6,9 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for the task entity entity edit forms.
+ * Form controller for the task entity edit forms.
+ *
+ * @package Drupal\task_system\Form
  */
 class TaskForm extends ContentEntityForm {
 

@@ -1,5 +1,5 @@
 name: 'Task system'
-description: 'Task list system for developers.'
+description: 'Task system for creating and assigning tasks for the users.'
 package: codebakers
 
 type: module

@@ -43,7 +43,6 @@ class TaskCompleteField extends FieldPluginBase {
       }
     }
 
-
     return [];
   }
 

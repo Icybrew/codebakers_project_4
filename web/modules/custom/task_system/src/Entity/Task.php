@@ -2,6 +2,7 @@
 
 namespace Drupal\task_system\Entity;
 
+use Drupal;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityStorageInterface;
@@ -66,7 +67,7 @@ class Task extends ContentEntityBase implements TaskInterface {
    */
   public static function preCreate(EntityStorageInterface $storage_controller, array &$values) {
     parent::preCreate($storage_controller, $values);
-    $values += ['uid' => \Drupal::currentUser()->id()];
+    $values += ['uid' => Drupal::currentUser()->id()];
   }
 
   /**
@@ -134,7 +135,6 @@ class Task extends ContentEntityBase implements TaskInterface {
    */
   public function getAssignedUser() {
     return $this->get('assigned_user')->entity;
-    //return $this->get('assigned_user')->first()->get('entity')->getTarget()->getValue();
   }
 
   /**
@@ -142,7 +142,6 @@ class Task extends ContentEntityBase implements TaskInterface {
    */
   public function setAssignedUser($user) {
     $this->get('assigned_user')->entity = $user;
-    // TODO is this correct?
     return $this;
   }
 
@@ -324,7 +323,6 @@ class Task extends ContentEntityBase implements TaskInterface {
           'match_operator' => 'CONTAINS',
           'size' => 60,
           'placeholder' => '',
-          'filter' => [], // TODO filter by the role from configuration
         ],
         'weight' => 8,
       ])
@@ -390,7 +388,6 @@ class Task extends ContentEntityBase implements TaskInterface {
           'match_operator' => 'CONTAINS',
           'size' => 60,
           'placeholder' => '',
-          'filter' => [], // TODO filter by the role from configuration
         ],
         'weight' => 8,
       ])

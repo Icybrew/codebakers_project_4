@@ -3,7 +3,6 @@
 
 namespace Drupal\task_system;
 
-
 use Drupal\views\EntityViewsData;
 
 /**

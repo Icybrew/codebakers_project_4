@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Provides a task entity entity type.
- */
-
 use Drupal\Core\Render\Element;
 
 /**
@@ -33,11 +28,4 @@ function template_preprocess_task(array &$variables) {
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
   }
-}
-
-/**
- * Implements hook_ENTITY_TYPE_update().
- */
-function task_system_task_update(Drupal\Core\Entity\EntityInterface $entity) {
-  $database = Drupal::database();
 }
