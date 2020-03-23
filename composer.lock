@@ -5623,6 +5623,11 @@
                     "Behat\\Gherkin": "src/"
                 }
             },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
